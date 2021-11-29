@@ -1,3 +1,17 @@
+<!-- TOC -->
+
+- [Go 设计模式](#go-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
+    - [什么是设计模式](#%E4%BB%80%E4%B9%88%E6%98%AF%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
+    - [模式的历史](#%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8E%86%E5%8F%B2)
+    - [设计模式的原则](#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%8E%9F%E5%88%99)
+    - [如何学习设计模式？](#%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
+    - [设计模式分类](#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%88%86%E7%B1%BB)
+    - [Reference](#reference)
+
+<!-- /TOC -->
+
+
+
 # Go 设计模式
 > 简称：GOF23
 
@@ -53,3 +67,7 @@
 
 
 ![](https://cdn.jsdelivr.net/gh/yezihack/assets/b/20200819144839.png?imageslim)
+
+## Reference
+1. 设计模式 https://refactoringguru.cn/design-patterns
+1. 图说设计模式 https://design-patterns.readthedocs.io/zh_CN/latest/index.html
