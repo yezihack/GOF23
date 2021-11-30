@@ -9,26 +9,60 @@ type SaveSystemProduct interface {
 }
 
 // 第二步：定义一个抽象工厂
-type SaveSystemCreator interface {
+type ISaveSystemCreator interface {
 	Create(s string) SaveSystemProduct
 }
 
-// 第三步：具体产品，即实现抽象产品的特征
-type SaveSystem struct {
+// 第三步：具体产品1，即实现抽象产品的特征
+type LocalSave struct {
 	data map[string]interface{}
 }
 
-func (s *SaveSystem) PutData(key string, val interface{}) {
+func (s *LocalSave) PutData(key string, val interface{}) {
 	s.data[key] = val
 }
-func (s *SaveSystem) GetData(key string) interface{} {
+func (s *LocalSave) GetData(key string) interface{} {
 	return s.data[key]
 }
 
-type LocalSave struct {
-	SaveSystem
+func NewLocalSave() SaveSystemProduct {
+	return &LocalSave{
+		data: make(map[string]interface{}),
+	}
 }
 
-func NewLocalSave() SaveSystemProduct {
-	return &LocalSave{}
+// 第三步：具体产品2，即实现抽象产品的特征
+type RemoteSave struct {
+	data map[string]interface{}
+}
+
+func (s *RemoteSave) PutData(key string, val interface{}) {
+	s.data[key] = val
+}
+func (s *RemoteSave) GetData(key string) interface{} {
+	return s.data[key]
+}
+
+func NewRemoteSave() SaveSystemProduct {
+	return &RemoteSave{
+		data: make(map[string]interface{}),
+	}
+}
+
+// 第四步：具体工厂，即实现抽象工厂
+type SaveSystemCreator struct {
+}
+
+func (s *SaveSystemCreator) Create(t string) SaveSystemProduct {
+	switch t {
+	case "local":
+		return NewLocalSave()
+	case "remote":
+		return NewRemoteSave()
+	default:
+		return nil
+	}
+}
+func NewSaveSystemCreator() ISaveSystemCreator {
+	return &SaveSystemCreator{}
 }
