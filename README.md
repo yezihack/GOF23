@@ -11,6 +11,7 @@
         - [接口隔离原则ISP](#%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E5%8E%9F%E5%88%99isp)
         - [接口倒置原则DIP](#%E6%8E%A5%E5%8F%A3%E5%80%92%E7%BD%AE%E5%8E%9F%E5%88%99dip)
     - [如何学习设计模式？](#%E5%A6%82%E4%BD%95%E5%AD%A6%E4%B9%A0%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F)
+    - [如何看懂 UML 图](#%E5%A6%82%E4%BD%95%E7%9C%8B%E6%87%82-uml-%E5%9B%BE)
     - [设计模式分类](#%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%88%86%E7%B1%BB)
         - [创建型模式](#%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F)
             - [工厂方法模式](#%E5%B7%A5%E5%8E%82%E6%96%B9%E6%B3%95%E6%A8%A1%E5%BC%8F)
@@ -143,6 +144,9 @@
 1. 设计模式是针对软件设计中常见问题的工具箱， 其中的工具就是各种经过实践验证的解决方案。
 1. 设计模式定义了一种让你和团队成员能够更高效沟通的通用语言。
 
+## 如何看懂 UML 图
+[UML](https://design-patterns.readthedocs.io/zh_CN/latest/read_uml.html)
+
 ## 设计模式分类
 ### 创建型模式
 > 创建型模式是提供创建对象的机制，增加已有的代码灵活性和复用性。
@@ -167,3 +171,4 @@
 1. 深入设计模式 https://refactoringguru.cn/design-patterns
 1. 图说设计模式 https://design-patterns.readthedocs.io/zh_CN/latest/index.html
 1. 设计模式之禅 https://book.douban.com/subject/25843319/
+1. 设计模式BLOG https://www.cnblogs.com/gupaoedu-tom/p/15549628.html
