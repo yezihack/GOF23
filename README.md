@@ -1,3 +1,5 @@
+[![workflows](https://github.com/yezihack/go-mygen/workflows/Go/badge.svg)](https://github.com/yezihack/go-mygen/actions)
+
 # Go 设计模式
 > 简称：GOF23
 
