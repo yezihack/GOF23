@@ -7,7 +7,7 @@ import (
 
 func TestNewTransport(t *testing.T) {
 	type args struct {
-		tool TransportTool
+		tool Tool
 	}
 	tests := []struct {
 		name string
