@@ -1,9 +1,10 @@
-package main
+package single_pattern
 
 import (
 	"fmt"
 	"sync"
 	"sync/atomic"
+	"testing"
 )
 
 // 1. go 自带单例模式
@@ -34,21 +35,9 @@ func CustomSingle(fn func()) {
 		}
 	}
 }
-
-func main() {
-	count := 1000
+func TestCustomSingle(t *testing.T) {
+	count := 10
 	wg := sync.WaitGroup{}
-	for i := 0; i < count; i++ {
-		wg.Add(1)
-		go func() {
-			defer wg.Done()
-			ReadBook(func() {
-				fmt.Println("I am reading book")
-			})
-		}()
-	}
-	// I am reading book
-
 	for i := 0; i < count; i++ {
 		wg.Add(1)
 		go func() {
@@ -60,4 +49,31 @@ func main() {
 	}
 	// I am look movie
 	wg.Wait()
+}
+
+func TestOnce(t *testing.T) {
+	count := 10
+	wg := sync.WaitGroup{}
+	for i := 0; i < count; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			ReadBook(func() {
+				fmt.Println("I am reading book")
+			})
+		}()
+	}
+	wg.Wait()
+}
+func TestLazySingle(t *testing.T) {
+	lazyMan := NewLazyMan()
+	lazyMan2 := NewLazyMan()
+	fmt.Printf("%p\n%p\n", lazyMan, lazyMan2)
+	if lazyMan != lazyMan2 {
+		t.Error("lazy single, different is address")
+	}
+}
+
+func TestHuangeSingle(t *testing.T) {
+	hMan.Display()
 }
